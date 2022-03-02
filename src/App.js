@@ -1,6 +1,6 @@
 import SideNav from "./components/sidenav/SideNav";
 import Topbar from "./components/topbar/Topbar";
-import "./app.css";
+import "./App.css";
 import Home from "./components/pages/Home";
 
 function App(){
