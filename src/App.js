@@ -37,11 +37,11 @@ return (
   <Authenticator components={components}>
     {({ signOut, user }) => (
       <div style={styles.container}>
-          {/* <iframe
+          <iframe
         width="960"
         height="720"
         src="https://ap-northeast-1.quicksight.aws.amazon.com/sn/embed/share/accounts/337039655624/dashboards/7f675f16-f54f-40b4-a7d1-6f7ef15d38f1">
-    </iframe> */}
+    </iframe>
         <button style={styles.button} onClick={signOut}>Sign out</button>   
       </div>
     )}
