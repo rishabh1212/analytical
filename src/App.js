@@ -4,7 +4,7 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import nihon_netsugen_logo from "./components/images/nihon_netsugen_logo.jpg";
 import { Authenticator, View ,Image } from '@aws-amplify/ui-react';
-// import '@aws-amplify/ui-react/styles.css';
+import '@aws-amplify/ui-react/styles.css';
 
 const styles = {
   ViewLogo:{paddingTop:"50%", width:"100%"},
@@ -37,13 +37,6 @@ return (
   <Authenticator components={components}>
     {({ signOut, user }) => (
       <div style={styles.container}>
-        <div className="App"> 
-          <Topbar/>
-          <div className="container">
-            <SideNav/>
-            <Home/>
-          </div>
-        </div>
           {/* <iframe
         width="960"
         height="720"
