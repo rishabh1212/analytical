@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Basic Embed</title>
+  <script
+    src="https://unpkg.com/amazon-quicksight-embedding-sdk@1.0.15/dist/quicksight-embedding-js-sdk.min.js"></script>
+  <script type="text/javascript">
+    var dashboard
+    function onDashboardLoad(payload) {
+      console.log("Do something when the dashboard is fully loaded.");
+    }
+
+    function onError(payload) {
+      console.log("Do something when the dashboard fails loading");
+    }
+
+    function testDashboard() {
+      var containerDiv = document.getElementById("embeddingContainer");
+      var options = {
+        // replace this dummy url with the one generated via embedding API
+        url: "https://ap-northeast-1.quicksight.aws.amazon.com/sn/embed/share/accounts/337039655624/dashboards/7f675f16-f54f-40b4-a7d1-6f7ef15d38f1",
+        container: containerDiv,
+        parameters: {
+          country: "United States"
+        },
+        scrolling: "no",
+        height: "700px",
+        width: "1000px",
+        locale: "en-US",
+        footerPaddingEnabled: true
+      };
+      dashboard = QuickSightEmbedding.embedDashboard(options);
+      dashboard.on("error", onError);
+      dashboard.on("load", onDashboardLoad);
+    }
+
+    function onCountryChange(obj) {
+      dashboard.setParameters({ country: obj.value });
+    }
+  </script>
+</head>
+
+<body onload="testDashboard()">
+  <span>
+    <label for="country">Country</label>
+    <select id="country" name="country" onchange="onCountryChange(this)">
+      <option value="United States">United States</option>
+      <option value="Mexico">Mexico</option>
+      <option value="Canada">Japan</option>
+    </select>
+  </span>
+  <div id="embeddingContainer"></div>
+</body>
+
+</html>
+
+
+
+<!-- https://ap-northeast-1.quicksight.aws.amazon.com/sn/embed/share/accounts/337039655624/dashboards/7f675f16-f54f-40b4-a7d1-6f7ef15d38f1 -->

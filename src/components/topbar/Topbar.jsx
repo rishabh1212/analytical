@@ -8,7 +8,7 @@ export default function Topbar() {
      <div className="topbarWrapper">
        
        <div className='topLeft'>
-        <img src={Netsumachine} 
+        <img src={Netsumachine}  alt="Netsugen"
         />
        </div>
        

@@ -1,9 +1,9 @@
 import React from 'react';
 import "./SideNav.css";
 import {BlurLinear, BubbleChart, MyLocation,InsertChart, DynamicFeed} from '@mui/icons-material';
+// import {quickSight} from "./src\components\sidenav\quickSight.html";
 
-
-export default function SideNav() {
+export default function SideNav() { 
   return (
     <div className="sideNav">
      <div className="sideNavWrapper">
@@ -33,7 +33,7 @@ export default function SideNav() {
 
 
            <li className='sideNavListItem '>
-           <InsertChart className='sideNavIcon'/>GRAPHS
+           <a href={""}> <InsertChart className='sideNavIcon'/>GRAPHS</a>
           
           </li>
 

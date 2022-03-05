@@ -4,9 +4,9 @@
 
   display: flex;
   border-radius: 4px;
-  box-shadow: -1px -1px 20px 9px rgba(62, 84, 202, 0.75);
-  -webkit-box-shadow: -1px -1px 20px 9px rgba(62, 84, 202, 0.75);
-  -moz-box-shadow: -1px -1px 20px 9px rgba(62, 84, 202, 0.75);
+  box-shadow: -1px -1px 20px 9px rgba(29, 61, 95, 0.85);
+  -webkit-box-shadow: -1px -1px 20px 9px rgba(29, 61, 95, 0.85);
+  -moz-box-shadow: -1px -1px 20px 9px rgba(29, 61, 95, 0.85);
 }
 .ChartTitle {
   margin-bottom: 20px;
